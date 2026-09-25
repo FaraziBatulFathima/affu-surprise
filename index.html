@@ -73,7 +73,29 @@ h1{font:900 clamp(43px,10vw,78px)/.95 Arial,sans-serif;letter-spacing:1px;text-t
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
 .fire{position:fixed;width:5px;height:5px;border-radius:50%;background:#f3c65c;z-index:90;pointer-events:none;animation:boom 1.15s ease-out forwards}
 @keyframes boom{0%{opacity:1;box-shadow:0 0 0 0 transparent}100%{opacity:0;box-shadow:0 -105px 0 2px #f6d97a,74px -74px 0 2px #fff,105px 0 0 2px #e8bd52,74px 74px 0 2px #fff,0 105px 0 2px #f6d97a,-74px 74px 0 2px #fff,-105px 0 0 2px #e8bd52,-74px -74px 0 2px #fff}}
-@media(max-width:500px){.card{padding:27px 17px 32px}.message{font-size:14px;line-height:1.75}.nickname{font-size:16px}}
+@keyframes boom{
+    0%{
+        opacity:1;
+        box-shadow:0 0 0 0 transparent
+    }
+
+    100%{
+        opacity:0;
+        box-shadow:
+        0 -105px 0 2px #f6d97a,
+        74px -74px 0 2px #fff,
+        105px 0 0 2px #e8bd52,
+        74px 74px 0 2px #fff,
+        0 105px 0 2px #f6d97a,
+        -74px 74px 0 2px #fff,
+        -105px 0 0 2px #e8bd52,
+        -74px -74px 0 2px #fff
+    }
+}
+
+
+/* PASTE THE NEW MOBILE CSS HERE */
+
 </style>
 </head>
 <body>
