@@ -16,8 +16,42 @@ body{font-family:Georgia,"Times New Roman",serif;background:#030303;color:#fff}
 .sub{font:13px Arial,sans-serif;letter-spacing:3px;color:#999;margin-top:28px}
 @keyframes pop{0%{transform:scale(1.65);opacity:0}55%{transform:scale(1);opacity:1}100%{transform:scale(.96)}}
 
-.main{position:fixed;inset:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:24px 14px;opacity:0;visibility:hidden;background:radial-gradient(circle at 50% 15%,#3a2a08 0,transparent 32%),radial-gradient(circle at 10% 90%,#241805 0,transparent 30%),#030303;transition:opacity 1.4s,visibility 1.4s}
-.main.show{opacity:1;visibility:visible}
+.main{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px 14px 40px;
+
+    opacity:0;
+    visibility:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #3a2a08 0,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            #241805 0,
+            transparent 30%
+        ),
+        #030303;
+
+    transition:
+        opacity 1.4s,
+        visibility 1.4s;
+
+    -webkit-overflow-scrolling:touch;
+}.main.show{opacity:1;visibility:visible}
 .card{position:relative;width:min(620px,96vw);padding:32px 24px 38px;text-align:center;border:1px solid #d5a93e55;border-radius:30px;background:linear-gradient(145deg,#ffffff12,#ffffff03);box-shadow:0 30px 100px #000, inset 0 0 40px #d4a83c0a;backdrop-filter:blur(14px);animation:card .9s ease}
 @keyframes card{from{opacity:0;transform:translateY(45px) scale(.93)}to{opacity:1;transform:none}}
 .line{width:85px;height:2px;margin:0 auto 19px;background:linear-gradient(90deg,transparent,#e6bd58,transparent)}
